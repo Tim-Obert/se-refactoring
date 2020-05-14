@@ -1,4 +1,4 @@
-public class NewReleasePrice implements Price {
+public class NewReleasePrice extends Price {
     public int getPriceCode(){
         return Movie.NEW_RELEASE;
     }
@@ -8,7 +8,7 @@ public class NewReleasePrice implements Price {
     }
 
     public int getFrequentRenterPoints(int daysRented) {
-        return 2;
+        return (daysRented > 1) ? 2: 1;
     }
 
 }
